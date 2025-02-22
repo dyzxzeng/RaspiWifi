@@ -1,0 +1,9 @@
+#!/bin/bash
+
+logger "raspiwifi entering client mode"
+python3 /usr/lib/raspiwifi/reset_device/reset.py &
+
+python3 /usr/lib/raspiwifi/reset_device/connection_monitor.py &
+
+#added
+python3 /usr/lib/raspiwifi/configuration_app/app.py &
